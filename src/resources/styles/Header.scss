@@ -27,7 +27,6 @@
         &:not(.scrolled) {
             z-index: 10;
             position: relative;
-            border-bottom: 1px solid #292929;
         }
 
         &.sticky-unset {

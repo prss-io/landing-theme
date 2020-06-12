@@ -1,0 +1,11 @@
+{
+  "name": "landing",
+  "title": "Landing",
+  "version": "1.0.1",
+  "author": "Francisco Hodge",
+  "homepage": "https://github.com/prss-io/landing-theme",
+  "license": "MIT",
+  "type": "showcase",
+  "parser": "react",
+  "siteVars": []
+}
