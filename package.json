@@ -1,6 +1,6 @@
 {
   "name": "landing",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Landing Theme for PRSS",
   "main": "build/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-react-jsx": "^7.8.3",
     "@babel/polyfill": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-stage-0": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",

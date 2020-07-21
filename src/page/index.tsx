@@ -11,7 +11,7 @@ import Hero from '../resources/components/Hero';
 const Post = data => {
     init(data);
 
-    const { heroMessage, heroImageUrl } = getProp('vars') as IVars;
+    const { heroMessage, heroImageUrl, heroTitle } = getProp('vars') as IVars;
 
     const { content, title: postTitle } = getProp('item');
     const sidebarHtml = getProp('sidebarHtml');
@@ -21,7 +21,7 @@ const Post = data => {
             <Header />
             {postTitle && (
                 <Hero imageUrl={heroImageUrl}>
-                    <h1 className="hero-title">{postTitle}</h1>
+                    <h1 className="hero-title">{heroTitle || postTitle}</h1>
                     {heroMessage && (
                         <div className="hero-message mt-2">{heroMessage}</div>
                     )}

@@ -7,10 +7,11 @@
         display: flex;
         margin-top: -80px;
         position: relative;
-        clip-path: ellipse(2500px 98vh at top);
         backface-visibility: hidden;
         flex-flow: column;
         align-items: center;
+        background-color: #ececec;
+        box-shadow: 0 0px 15px #f1f1f1;
 
         .hero-text {
             text-align: center;

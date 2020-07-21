@@ -93,103 +93,103 @@ const Home = data => {
                 )}
             </Hero>
 
-            {false && (
-                <main>
+            {content && content.trim().length && (
+                <main class="mt-2">
                     <div className="container main-container">
                         <div className="row">
                             <div className="col">
                                 <div className="content">
-                                    {content && content.trim().length && (
-                                        <section
-                                            dangerouslySetInnerHTML={{
-                                                __html: content
-                                            }}
-                                        />
-                                    )}
+                                    <section
+                                        dangerouslySetInnerHTML={{
+                                            __html: content
+                                        }}
+                                    />
 
-                                    <section className="mb-3">
-                                        <h2 className="section-title">
-                                            <span>Latest Posts</span>
-                                            <a href={getPathUrl('blog')}>
-                                                more
-                                            </a>
-                                        </h2>
+                                    {false && (
+                                        <section className="mb-3">
+                                            <h2 className="section-title">
+                                                <span>Latest Posts</span>
+                                                <a href={getPathUrl('blog')}>
+                                                    more
+                                                </a>
+                                            </h2>
 
-                                        <div className="row mt-4 mb-4">
-                                            {items.slice(0, 6).map(post => {
-                                                return (
-                                                    <div class="col-sm-6 col-md-4">
-                                                        <div className="card mb-4">
-                                                            {post.vars
-                                                                ?.featuredImageUrl && (
-                                                                <a
-                                                                    className="card-image"
-                                                                    href={
-                                                                        post.url
-                                                                    }
-                                                                >
-                                                                    <img
-                                                                        className="card-img-top"
-                                                                        src={
-                                                                            post
-                                                                                .vars
-                                                                                ?.featuredImageUrl
-                                                                        }
-                                                                        alt={
-                                                                            post
-                                                                                .vars
-                                                                                ?.featuredImageAlt
-                                                                        }
-                                                                        loading="lazy"
-                                                                    />
-                                                                </a>
-                                                            )}
-
-                                                            <div className="card-body">
-                                                                {post.title && (
+                                            <div className="row mt-4 mb-4">
+                                                {items.slice(0, 6).map(post => {
+                                                    return (
+                                                        <div class="col-sm-6 col-md-4">
+                                                            <div className="card mb-4">
+                                                                {post.vars
+                                                                    ?.featuredImageUrl && (
                                                                     <a
-                                                                        className="card-title"
+                                                                        className="card-image"
                                                                         href={
                                                                             post.url
                                                                         }
                                                                     >
-                                                                        {truncateStr(
-                                                                            post.title,
-                                                                            65
-                                                                        )}
+                                                                        <img
+                                                                            className="card-img-top"
+                                                                            src={
+                                                                                post
+                                                                                    .vars
+                                                                                    ?.featuredImageUrl
+                                                                            }
+                                                                            alt={
+                                                                                post
+                                                                                    .vars
+                                                                                    ?.featuredImageAlt
+                                                                            }
+                                                                            loading="lazy"
+                                                                        />
                                                                     </a>
                                                                 )}
 
-                                                                {post.content && (
-                                                                    <p className="card-text mt-1">
-                                                                        {
-                                                                            post.content
-                                                                        }
-                                                                    </p>
-                                                                )}
-
-                                                                {post.createdAt && (
-                                                                    <p className="card-text">
-                                                                        <small
-                                                                            className="text-muted"
-                                                                            title={formattedDate(
-                                                                                post.createdAt
-                                                                            )}
+                                                                <div className="card-body">
+                                                                    {post.title && (
+                                                                        <a
+                                                                            className="card-title"
+                                                                            href={
+                                                                                post.url
+                                                                            }
                                                                         >
-                                                                            Posted{' '}
-                                                                            {timeAgo(
-                                                                                post.createdAt
+                                                                            {truncateStr(
+                                                                                post.title,
+                                                                                65
                                                                             )}
-                                                                        </small>
-                                                                    </p>
-                                                                )}
+                                                                        </a>
+                                                                    )}
+
+                                                                    {post.content && (
+                                                                        <p className="card-text mt-1">
+                                                                            {
+                                                                                post.content
+                                                                            }
+                                                                        </p>
+                                                                    )}
+
+                                                                    {post.createdAt && (
+                                                                        <p className="card-text">
+                                                                            <small
+                                                                                className="text-muted"
+                                                                                title={formattedDate(
+                                                                                    post.createdAt
+                                                                                )}
+                                                                            >
+                                                                                Posted{' '}
+                                                                                {timeAgo(
+                                                                                    post.createdAt
+                                                                                )}
+                                                                            </small>
+                                                                        </p>
+                                                                    )}
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    </section>
+                                                    );
+                                                })}
+                                            </div>
+                                        </section>
+                                    )}
                                 </div>
                             </div>
                             {sidebarHtml && (
@@ -204,7 +204,8 @@ const Home = data => {
                     </div>
                 </main>
             )}
-            {false && <Footer />}
+
+            <Footer />
         </Page>
     );
 };
