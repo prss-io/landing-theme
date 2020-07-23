@@ -1,5 +1,5 @@
 {
-  "name": "landing",
+  "name": "@hodgef/landing-theme",
   "version": "1.1.0",
   "description": "Landing Theme for PRSS",
   "main": "build/index.js",
