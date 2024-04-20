@@ -9,7 +9,7 @@ import Page from '../resources/components/Page';
 import Hero from '../resources/components/Hero';
 
 const Home = data => {
-    PRSS.PRSS.init(data);
+    PRSS.init(data);
     (window as any).PRSS = PRSS;
 
     const {
@@ -19,7 +19,7 @@ const Home = data => {
         heroShowcaseImageUrl,
         ctaUrl,
         ctaLabel
-    } = PRSS.init('vars') as IVars;
+    } = PRSS.getProp('vars') as IVars;
 
     const links = PRSS.getJsonProp('vars.links') as ILink[];
 
