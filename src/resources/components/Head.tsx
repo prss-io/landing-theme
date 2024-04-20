@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
-import { getProp } from 'prss';
+import * as PRSS from 'prss';
 
 interface IProps {}
 
@@ -13,7 +13,7 @@ const Head: FunctionComponent<IProps> = () => {
         metaUrl,
         metaSiteName,
         metaImage
-    } = getProp('vars') as IVars;
+    } = PRSS.getProp('vars') as IVars;
 
     return (
         <Helmet>

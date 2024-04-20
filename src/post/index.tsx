@@ -2,16 +2,7 @@ import '../resources/styles/common.scss';
 import './index.scss';
 
 import React from 'react';
-import {
-    init,
-    getProp,
-    getJsonProp,
-    timeAgo,
-    getItems,
-    getPathUrl,
-    shuffle,
-    formattedDate
-} from 'prss';
+import * as PRSS from 'prss';
 
 import cx from 'classnames';
 
@@ -23,28 +14,28 @@ import { isset } from '../resources/services/utils';
 import Aside from '../resources/components/Aside';
 
 const Post = data => {
-    init(data);
+    PRSS.init(data);
+    (window as any).PRSS = PRSS;
 
     const {
         heroTitle,
         heroMessage,
         heroImageUrl,
         featuredImageUrl,
-        featuredImageAlt,
         sidebarAsideHtml
-    } = getProp('vars') as IVars;
+    } = PRSS.getProp('vars') as IVars;
 
-    const links = getJsonProp('vars.links') as ILink[];
+    const links = PRSS.getJsonProp('vars.links') as ILink[];
 
-    const { content, uuid: postId, title: postTitle, createdAt } = getProp(
+    const { content, uuid: postId, title: postTitle, createdAt } = PRSS.getProp(
         'item'
     );
-    const { title, url } = getProp('site');
-    const sidebarHtml = getProp('sidebarHtml');
-    const headerHtml = getProp('headerHtml');
+    const { title, url } = PRSS.getProp('site');
+    const sidebarHtml = PRSS.getProp('sidebarHtml');
+    const headerHtml = PRSS.getProp('headerHtml');
 
-    const items = getItems('post').filter(item => item.uuid !== postId);
-    const shuffledItem = shuffle(items)[0];
+    const items = PRSS.getItems('post').filter(item => item.uuid !== postId);
+    const shuffledItem = PRSS.shuffle(items)[0];
 
     return (
         <Page className="page-post">
@@ -65,11 +56,11 @@ const Post = data => {
                         {createdAt && (
                             <div
                                 className="text-muted mt-3 date post-date d-flex align-items-center"
-                                title={timeAgo(createdAt)}
+                                title={PRSS.timeAgo(createdAt)}
                             >
                                 <i class={`fa fa-clock-o mr-2`}></i>
                                 <span>
-                                    Published on {formattedDate(createdAt)}
+                                    Published on {PRSS.formattedDate(createdAt)}
                                 </span>
                             </div>
                         )}
@@ -95,12 +86,12 @@ const Post = data => {
                                     {createdAt && (
                                         <div
                                             className="text-muted mt-3 date post-date d-flex align-items-center"
-                                            title={timeAgo(createdAt)}
+                                            title={PRSS.timeAgo(createdAt)}
                                         >
                                             <i class={`fa fa-clock-o mr-2`}></i>
                                             <span>
                                                 Published on{' '}
-                                                {formattedDate(createdAt)}
+                                                {PRSS.formattedDate(createdAt)}
                                             </span>
                                         </div>
                                     )}
@@ -115,14 +106,14 @@ const Post = data => {
                                             {createdAt && (
                                                 <div
                                                     className="text-muted mt-3 date post-date d-flex align-items-center"
-                                                    title={timeAgo(createdAt)}
+                                                    title={PRSS.timeAgo(createdAt)}
                                                 >
                                                     <i
                                                         class={`fa fa-clock-o mr-2`}
                                                     ></i>
                                                     <span>
                                                         Published on{' '}
-                                                        {formattedDate(
+                                                        {PRSS.formattedDate(
                                                             createdAt
                                                         )}
                                                     </span>
