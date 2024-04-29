@@ -1,7 +1,7 @@
 {
   "name": "@hodgef/landing-theme",
   "title": "Landing",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/landing-theme",
   "license": "MIT",
@@ -29,11 +29,11 @@
       "description": "Message that appears under the hero title"
     },
     "heroImageUrl": {
-      "type": "url",
+      "type": "image",
       "description": "Url for the featured image"
     },
     "heroShowcaseImageUrl": {
-      "type": "url",
+      "type": "image",
       "description": "Url for the showcase image"
     },
     "ctaUrl": {
