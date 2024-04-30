@@ -8,7 +8,7 @@ import Footer from '../resources/components/Footer';
 import Page from '../resources/components/Page';
 import Hero from '../resources/components/Hero';
 
-const Card = data => {
+const Post = data => {
   PRSS.init(data);
   (window as any).PRSS = PRSS;
 
@@ -60,4 +60,4 @@ const Card = data => {
   );
 };
 
-export default Card;
+export default Post;

@@ -3,6 +3,16 @@
     height: 415px;
   }
 
+  main {
+    background: transparent;
+    margin-bottom: 100px;
+    margin-top: -80px;
+
+    .main-container {
+      box-shadow: 0 0 27px #26252d;
+    }
+  }
+
   .post-content {
     font-size: 20px;
 
