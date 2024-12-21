@@ -1,5 +1,5 @@
-import '../resources/styles/common.scss';
-import './index.scss';
+import '../resources/styles/common.css';
+import './index.css';
 
 import React from 'react';
 import * as PRSS from 'prss';
@@ -22,17 +22,14 @@ const Post = data => {
     heroMessage,
     heroImageUrl,
     featuredImageUrl,
-    sidebarAsideHtml
+    sidebarAsideHtml,
+    heroClass
   } = PRSS.getProp('vars') as IVars;
-
-  const links = PRSS.getJsonProp('vars.links') as ILink[];
 
   const { content, uuid: postId, title: postTitle, createdAt } = PRSS.getProp(
     'item'
   );
-  const { title, url } = PRSS.getProp('site');
   const sidebarHtml = PRSS.getProp('sidebarHtml');
-  const headerHtml = PRSS.getProp('headerHtml');
 
   const items = PRSS.getItems('post').filter(item => item.uuid !== postId);
   const shuffledItem = PRSS.shuffle(items)[0];
@@ -41,7 +38,7 @@ const Post = data => {
     <Page className="page-post">
       <Header />
       {(postTitle || heroTitle) && (
-        <Hero imageUrl={featuredImageUrl || heroImageUrl}>
+        <Hero imageUrl={featuredImageUrl || heroImageUrl} heroClass={heroClass}>
           <div>
             {(postTitle || heroTitle) && (
               <h1 className="hero-title">{heroTitle || postTitle}</h1>

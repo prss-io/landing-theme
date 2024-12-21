@@ -1,19 +1,21 @@
-import '../styles/Hero.scss';
+import '../styles/Hero.css';
 import React, { FunctionComponent, ReactNode } from 'react';
 
 interface IProps {
   children: ReactNode;
   imageUrl: ReactNode;
   afterComponent?: ReactNode;
+  heroClass?: string;
 }
 
 const Hero: FunctionComponent<IProps> = ({
   children,
   imageUrl = '',
-  afterComponent
+  afterComponent,
+  heroClass
 }) => {
   return (
-    <div className="hero">
+    <div className={`hero${heroClass ? ` ${heroClass}` : ''}`}>
       <div
         className="hero-image"
         style={{

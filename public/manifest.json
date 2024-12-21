@@ -2,6 +2,7 @@
     "title": "Landing",
     "type": "showcase",
     "parser": "react",
+    "isSSR": true,
     "siteVars": {
         "logoImageUrl": {
             "type": "image",
@@ -14,6 +15,10 @@
         "featuredImageAlt": {
             "type": "image",
             "description": "Path for the post's alt featured image"
+        },
+        "heroClass": {
+            "type": "string",
+            "description": "Class for the hero section"
         },
         "heroTitle": {
             "type": "string",

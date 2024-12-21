@@ -1,4 +1,4 @@
-import '../styles/Footer.scss';
+import '../styles/Footer.css';
 
 import React, { FunctionComponent } from 'react';
 import * as PRSS from 'prss';
@@ -35,14 +35,14 @@ const Footer: FunctionComponent<IProps> = () => {
                 className="d-flex align-items-center footer-shoutout"
                 target="_blank"
                 rel="noopener"
+                title="Powered by PRSS Site Creator"
               >
-                <span>Powered by</span>
                 <img
                   className="prss-footer-image mx-1"
                   src={prssImg}
                   width={15}
                 />
-                <span className="font-weight-bold">PRSS</span>
+                <span className="font-weight-bold prss-tag">PRSS Site Creator</span>
               </a>
             )}
           </div>

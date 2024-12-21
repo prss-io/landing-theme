@@ -10,6 +10,7 @@ interface IVars {
     heroMessage?: string;
     heroImageUrl?: string;
     heroShowcaseImageUrl?: string;
+    heroClass?: string;
 
     /**
      * Download

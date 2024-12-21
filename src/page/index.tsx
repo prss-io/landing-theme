@@ -1,5 +1,5 @@
-import '../resources/styles/common.scss';
-import './index.scss';
+import '../resources/styles/common.css';
+import './index.css';
 
 import React from 'react';
 import * as PRSS from 'prss';
@@ -12,7 +12,7 @@ const Card = data => {
   PRSS.init(data);
   (window as any).PRSS = PRSS;
 
-  const { heroMessage, heroImageUrl, heroTitle } = PRSS.getProp(
+  const { heroMessage, heroImageUrl, heroTitle, heroClass } = PRSS.getProp(
     'vars'
   ) as IVars;
   const { content, title: postTitle } = PRSS.getProp('item');
@@ -22,7 +22,7 @@ const Card = data => {
     <Page className="page-post">
       <Header />
       {postTitle && (
-        <Hero imageUrl={heroImageUrl}>
+        <Hero imageUrl={heroImageUrl} heroClass={heroClass}>
           <h1 className="hero-title">{heroTitle || postTitle}</h1>
           {heroMessage && (
             <div className="hero-message mt-2">{heroMessage}</div>

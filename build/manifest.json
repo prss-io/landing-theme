@@ -1,7 +1,7 @@
 {
   "name": "@hodgef/landing-theme",
   "title": "Landing",
-  "version": "2.0.0",
+  "version": "3.0.2",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/landing-theme",
   "license": "MIT",
@@ -19,6 +19,10 @@
     "featuredImageAlt": {
       "type": "image",
       "description": "Path for the post's alt featured image"
+    },
+    "heroClass": {
+      "type": "string",
+      "description": "Class for the hero section"
     },
     "heroTitle": {
       "type": "string",
@@ -108,5 +112,6 @@
     "home",
     "page",
     "post"
-  ]
+  ],
+  "isSSR": true
 }

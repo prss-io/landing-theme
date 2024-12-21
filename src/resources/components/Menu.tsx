@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode, Fragment } from 'react';
 import * as PRSS from 'prss';
 import cx from 'classnames';
-import '../styles/Menu.scss';
+import '../styles/Menu.css';
 
 interface IProps {
   name: string;

@@ -1,4 +1,4 @@
-import '../styles/Header.scss';
+import '../styles/Header.css';
 import React, { FunctionComponent, useEffect, useState, useRef } from 'react';
 import cx from 'classnames';
 import * as PRSS from 'prss';

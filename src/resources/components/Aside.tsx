@@ -1,4 +1,4 @@
-import '../styles/Aside.scss';
+import '../styles/Aside.css';
 
 import React, { FunctionComponent, useEffect, useRef } from 'react';
 import * as PRSS from 'prss';

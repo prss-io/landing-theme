@@ -1,0 +1,72 @@
+.hero {
+  height: 500px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+
+.hero .hero-image,
+.hero::before {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero::before {
+  content: '';
+  background: #26252d;
+  z-index: 1;
+}
+
+.hero .hero-image {
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero .hero-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.hero .hero-message {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.hero .container {
+  z-index: 2;
+}
+
+.hero .container .hero-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero .hero-showcase-image img {
+  width: 100%;
+  height: auto;
+  max-width: 1160px;
+}
+
+.hero .links {
+  display: flex;
+  font-size: 18px;
+}
+
+.hero .links a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.hero .links a:hover span {
+  text-decoration: underline;
+}

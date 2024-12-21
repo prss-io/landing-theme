@@ -1,0 +1,44 @@
+.page.page-home .hero {
+  height: 100vh;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 50px;
+  display: flex;
+  margin-top: -80px;
+  position: relative;
+  backface-visibility: hidden;
+  flex-flow: column;
+  align-items: center;
+  background-color: #ececec;
+  box-shadow: 0 0px 15px #f1f1f1;
+}
+
+.page.page-home .hero .hero-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.page.page-home .hero .hero-showcase-image {
+  z-index: 1;
+}
+
+.page.page-home .card a.card-title {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin-bottom: 16px;
+  display: block;
+  line-height: 30px;
+}
+
+.page.page-home .cta-btn {
+  font-size: 22px;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 40px;
+  padding: 10px 30px;
+}

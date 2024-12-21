@@ -1,5 +1,5 @@
-import '../resources/styles/common.scss';
-import './index.scss';
+import '../resources/styles/common.css';
+import './index.css';
 
 import React from 'react';
 import * as PRSS from 'prss';
@@ -21,7 +21,8 @@ const Blog = data => {
     heroTitle,
     heroMessage,
     heroImageUrl,
-    sidebarAsideHtml
+    sidebarAsideHtml,
+    heroClass
   } = PRSS.getProp('vars') as IVars;
 
   const links = PRSS.getJsonProp('vars.links') as ILink[];
@@ -35,7 +36,7 @@ const Blog = data => {
     <Page className="page-blog">
       <Header />
       {(heroTitle || title) && (
-        <Hero imageUrl={heroImageUrl}>
+        <Hero imageUrl={heroImageUrl} heroClass={heroClass}>
           <h1 className="hero-title">{heroTitle || title}</h1>
           {heroMessage && (
             <div className="hero-message mt-2">{heroMessage}</div>

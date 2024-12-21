@@ -1,5 +1,5 @@
-import '../resources/styles/common.scss';
-import './index.scss';
+import '../resources/styles/common.css';
+import './index.css';
 
 import React, { useState, useEffect, Fragment } from 'react';
 import * as PRSS from 'prss';
@@ -25,7 +25,8 @@ const Docs = data => {
     sidebarMenu,
     footerCta,
     warningHtml,
-    contentFooterHtml
+    contentFooterHtml,
+    heroClass
   } = PRSS.getProp('vars') as IVars;
 
   const { content, uuid: postId, title: postTitle } = PRSS.getProp('item');
@@ -104,7 +105,7 @@ const Docs = data => {
   return (
     <Page className="page-docs">
       <Header onScrollCallback={onScroll} onResizeCallback={onResize} />
-      {postTitle && <Hero imageUrl={heroImageUrl} />}
+      {postTitle && <Hero imageUrl={heroImageUrl} heroClass={heroClass} />}
       <main>
         <div
           className={cx('container main-container', {

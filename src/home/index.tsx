@@ -1,5 +1,5 @@
-import '../resources/styles/common.scss';
-import './index.scss';
+import '../resources/styles/common.css';
+import './index.css';
 
 import React, { Fragment } from 'react';
 import * as PRSS from 'prss';
@@ -18,13 +18,13 @@ const Home = data => {
     heroImageUrl,
     heroShowcaseImageUrl,
     ctaUrl,
-    ctaLabel
+    ctaLabel,
+    heroClass
   } = PRSS.getProp('vars') as IVars;
 
   const links = PRSS.getJsonProp('vars.links') as ILink[];
 
   const { content } = PRSS.getProp('item');
-  const { title, url } = PRSS.getProp('site');
   const sidebarHtml = PRSS.getProp('sidebarHtml');
 
   const items = PRSS.getItems('post', true);
@@ -46,6 +46,7 @@ const Home = data => {
             )}
           </Fragment>
         }
+        heroClass={heroClass}
       >
         <div className="hero-text animate__animated animate__fadeIn">
           {heroTitle && <h1 className="hero-title">{heroTitle}</h1>}
