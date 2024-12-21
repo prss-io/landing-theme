@@ -42,3 +42,10 @@
   display: inline-flex;
   letter-spacing: normal;
 }
+
+@media (max-width: 1000px) {
+  .page footer.page-footer {
+    height: auto !important;
+    padding: 30px 15px;
+  }
+}

@@ -15,7 +15,7 @@ const Footer: FunctionComponent<IProps> = () => {
     <footer className="page-footer">
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col col-12 col-md-6">
             {footerLeft ? (
               <div
                 dangerouslySetInnerHTML={{
@@ -26,7 +26,7 @@ const Footer: FunctionComponent<IProps> = () => {
               <span>© {title}</span>
             )}
           </div>
-          <div className="col d-flex justify-content-end">
+          <div className="col col-12 col-md-6 mt-3 mt-md-0 d-flex justify-content-md-end">
             {footerRight ? (
               <span>{footerRight}</span>
             ) : (
@@ -38,7 +38,7 @@ const Footer: FunctionComponent<IProps> = () => {
                 title="Powered by PRSS Site Creator"
               >
                 <img
-                  className="prss-footer-image mx-1"
+                  className="prss-footer-image mr-1"
                   src={prssImg}
                   width={15}
                 />

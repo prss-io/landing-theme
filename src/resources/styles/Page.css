@@ -57,7 +57,7 @@
 .page main {
   overflow: hidden;
   background: white;
-  margin-bottom: 100px;
+  margin-bottom: 20vh;
 }
 
 .page main .content {
