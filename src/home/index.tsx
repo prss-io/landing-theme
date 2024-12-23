@@ -103,39 +103,39 @@ const Home = data => {
                           return (
                             <div className="col-sm-6 col-md-4">
                               <div className="card mb-4">
-                                {post.vars?.featuredImageUrl && (
-                                  <a className="card-image" href={post.url}>
+                                {post?.vars?.featuredImageUrl && (
+                                  <a className="card-image" href={post?.url}>
                                     <img
                                       className="card-img-top"
-                                      src={post.vars?.featuredImageUrl}
-                                      alt={post.vars?.featuredImageAlt}
+                                      src={post?.vars?.featuredImageUrl}
+                                      alt={post?.vars?.featuredImageAlt}
                                       loading="lazy"
                                     />
                                   </a>
                                 )}
 
                                 <div className="card-body">
-                                  {post.title && (
-                                    <a className="card-title" href={post.url}>
-                                      {PRSS.truncateStr(post.title, 65)}
+                                  {post?.title && (
+                                    <a className="card-title" href={post?.url}>
+                                      {PRSS.truncateStr(post?.title, 65)}
                                     </a>
                                   )}
 
-                                  {post.content && (
+                                  {post?.content && (
                                     <p className="card-text mt-1">
-                                      {post.content}
+                                      {post?.content}
                                     </p>
                                   )}
 
-                                  {post.createdAt && (
+                                  {post?.createdAt && (
                                     <p className="card-text">
                                       <small
                                         className="text-muted"
                                         title={PRSS.formattedDate(
-                                          post.createdAt
+                                          post?.createdAt
                                         )}
                                       >
-                                        Posted {PRSS.timeAgo(post.createdAt)}
+                                        Posted {PRSS.timeAgo(post?.createdAt)}
                                       </small>
                                     </p>
                                   )}

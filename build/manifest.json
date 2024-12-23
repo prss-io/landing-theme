@@ -1,7 +1,7 @@
 {
   "name": "@hodgef/landing-theme",
   "title": "Landing",
-  "version": "3.0.7",
+  "version": "3.0.10",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/landing-theme",
   "license": "MIT",
@@ -107,10 +107,16 @@
   },
   "templates": [
     "blog",
+    "blog",
+    "card",
     "card",
     "docs",
+    "docs",
+    "home",
     "home",
     "page",
+    "page",
+    "post",
     "post"
   ],
   "isSSR": true
