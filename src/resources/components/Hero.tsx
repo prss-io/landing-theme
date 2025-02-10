@@ -23,7 +23,7 @@ const Hero: FunctionComponent<IProps> = ({
         }}
       />
       <div className="container mt-5 mt-sm-0">
-        <div className="row mx-2 justify-content-between">
+        <div className="row mx-2 justify-content-between title-container-element">
           <div className="col">{children}</div>
         </div>
       </div>

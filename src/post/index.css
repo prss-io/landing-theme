@@ -8,24 +8,42 @@
 .page.page-post h4,
 .page.page-post h5,
 .page.page-post h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
 .page.page-post h1 {
-  font-size: 50px;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.page.page-post h2 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-family: "Work Sans", serif;
 }
 
 .page.page-post h3 {
-  font-size: 24px;
   font-weight: 700;
-  margin: 30px 0;
+  margin-bottom: 15px;
+  margin-top: 40px;
+  font-family: "Work Sans", serif;
+}
+
+.page.page-post h4:not(.explore-more) {
+  margin-top: 25px;
+}
+
+.page.page-post h4 {
+  font-family: "Work Sans", serif;
 }
 
 .page.page-post h5 {
   margin-top: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-family: "Work Sans", serif;
 }
 
 .page.page-post strong {
@@ -36,10 +54,6 @@
   width: 100%;
   min-height: 300px;
 }
-
-/* .page.page-post main .main-container section {
-  margin-top: 0;
-} */
 
 .page.page-post .hero {
   height: 415px;
@@ -86,12 +100,6 @@
   line-height: 1.58;
 }
 
-/* .page.page-post .post-content img[style] {
-  margin-left: 50%;
-  transform: translateX(-50%);
-  max-width: 100%;
-} */
-
 .page.page-post .featured-image {
   height: 330px;
   background-size: cover;
@@ -134,4 +142,8 @@
   font-size: 80px;
   color: white;
   transition: opacity 0.3s ease-in-out;
+}
+
+.page.page-post main .content .post-inner-content > *:first-child {
+  margin-top: 0;
 }

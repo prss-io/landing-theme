@@ -70,3 +70,7 @@
 .hero .links a:hover span {
   text-decoration: underline;
 }
+
+.hero .title-container-element {
+  margin-top: 50px;
+}
