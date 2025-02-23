@@ -22,15 +22,20 @@ const Blog = data => {
     heroMessage,
     heroImageUrl,
     sidebarAsideHtml,
-    heroClass
-  } = PRSS.getProp('vars') as IVars;
+    heroClass,
+    blogPosts,
+    currentPage,
+    totalPages
+  } = PRSS.getProp('vars') as any;
+
+  const { rootPath } = data;
 
   const links = PRSS.getJsonProp('vars.links') as ILink[];
-
   const { content, title } = PRSS.getProp('item');
   const sidebarHtml = PRSS.getProp('sidebarHtml');
+  const items = PRSS.getItems('post', true, blogPosts);
+  const adjustedRootPath = currentPage === 1 ? rootPath : `../${rootPath}`;
 
-  const items = PRSS.getItems('post', true);
 
   return (
     <Page className="page-blog">
@@ -117,6 +122,48 @@ const Blog = data => {
                 <Aside name="sidebarAsideHtml" />
               </div>
             )}
+          </div>
+          <div className="row">
+            <div className="col">
+              <nav aria-label="Page navigation">
+                <ul className="pagination flex justify-content-center">
+                  {currentPage > 1 && (
+                    <li className="page-item">
+                      <a
+                        className="page-link"
+                        href={`${adjustedRootPath}blog/${currentPage - 1 === 1 ? "" : currentPage - 1}`}
+                      >
+                        Previous
+                      </a>
+                    </li>
+                  )}
+                  {Array.from({ length: totalPages }).map((_, i) => {
+                    const pageNumber = i + 1;
+                    const isActive = currentPage === pageNumber;
+                    return (
+                      <li key={i} className="page-item">
+                        <a
+                          href={`${pageNumber === 1 ? `${adjustedRootPath}blog/` : `${adjustedRootPath}blog/${pageNumber}/`}`}
+                          className={cx('page-link', { active: isActive })}
+                        >
+                          {pageNumber}
+                        </a>
+                      </li>
+                    );
+                  })}
+                  {currentPage < totalPages && (
+                    <li className="page-item">
+                      <a
+                        className="page-link"
+                        href={`${adjustedRootPath}blog/${currentPage + 1}`}
+                      >
+                        Next
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </main>
