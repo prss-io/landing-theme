@@ -22,9 +22,11 @@ const Post = data => {
     heroMessage,
     heroImageUrl,
     featuredImageUrl,
+    featuredImageAuthor,
+    featuredImageAuthorLink,
     sidebarAsideHtml,
     heroClass
-  } = PRSS.getProp('vars') as IVars;
+  } = PRSS.getProp('vars') as any;
 
   const { content, uuid: postId, title: postTitle, createdAt } = PRSS.getProp(
     'item'
@@ -48,7 +50,7 @@ const Post = data => {
             )}
             {createdAt && (
               <div
-                className="text-muted mt-3 date post-date d-flex align-items-center"
+                className="mt-3 date post-date d-flex align-items-center"
                 title={PRSS.formattedDate(createdAt)}
               >
                 <i className={`fa fa-clock-o mr-2`}></i>
@@ -56,6 +58,20 @@ const Post = data => {
               </div>
             )}
           </div>
+          {featuredImageUrl && featuredImageAuthor && (
+            <div className="hero-image-author">
+              Photo by{' '}
+              {featuredImageAuthorLink && (
+                <a
+                  href={featuredImageAuthorLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {featuredImageAuthor} via Pexels
+                </a>
+              )}
+            </div>
+          )}
         </Hero>
       )}
       <main>
@@ -64,7 +80,7 @@ const Post = data => {
             <div className="col">
               <div className="content">
                 {content && content.trim().length && (
-                  <section className="post-content mb-3 pb-5">
+                  <section className="post-content mt-4 mb-3 pb-5">
                     <div
                       className="post-inner-content"
                       dangerouslySetInnerHTML={{

@@ -24,7 +24,7 @@ const Hero: FunctionComponent<IProps> = ({
       />
       <div className="container mt-5 mt-sm-0">
         <div className="row mx-2 justify-content-between title-container-element">
-          <div className="col">{children}</div>
+          <div className="col position-static">{children}</div>
         </div>
       </div>
       {afterComponent}
