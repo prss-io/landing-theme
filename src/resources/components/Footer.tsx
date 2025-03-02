@@ -28,7 +28,11 @@ const Footer: FunctionComponent<IProps> = () => {
           </div>
           <div className="col col-12 col-md-6 mt-3 mt-md-0 d-flex justify-content-md-end">
             {footerRight ? (
-              <span>{footerRight}</span>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: footerRight
+                  }}
+                ></div>
             ) : (
               <a
                 href="https://prss.io"
