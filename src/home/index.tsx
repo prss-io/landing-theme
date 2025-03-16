@@ -19,7 +19,8 @@ const Home = data => {
     heroShowcaseImageUrl,
     ctaUrl,
     ctaLabel,
-    heroClass
+    heroClass,
+    truncateTitleLength = 65
   } = PRSS.getProp('vars') as IVars;
 
   const links = PRSS.getJsonProp('vars.links') as ILink[];
@@ -117,7 +118,7 @@ const Home = data => {
                                 <div className="card-body">
                                   {post?.title && (
                                     <a className="card-title" href={post?.url}>
-                                      {PRSS.truncateStr(post?.title, 65)}
+                                      {PRSS.truncateStr(post?.title, parseInt(truncateTitleLength as any))}
                                     </a>
                                   )}
 

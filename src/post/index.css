@@ -168,3 +168,7 @@
 .page.page-post .hero-image-author:hover {
   opacity: 1;
 }
+
+.page.page-post .post-content p > a {
+  text-decoration: underline;
+}
