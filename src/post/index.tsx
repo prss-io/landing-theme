@@ -79,16 +79,13 @@ const Post = data => {
           <div className="row">
             <div className="col">
               <div className="content">
-                {content && content.trim().length && (
-                  <section className="post-content mt-4 mb-3 pb-5">
-                    <div
-                      className="post-inner-content"
-                      dangerouslySetInnerHTML={{
-                        __html: content
-                      }}
-                    />
-                  </section>
-                )}
+                <section className="post-content mt-4 mb-3 pb-5">
+                  <div className="post-inner-content"
+                    dangerouslySetInnerHTML={{
+                      __html: content
+                    }}
+                  />
+                </section>
 
                 {shuffledItem && (
                   <section className="mb-3">

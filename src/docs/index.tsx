@@ -176,7 +176,6 @@ const Docs = data => {
             <div className="col col-md-9">
               <div className="content">
                 <div className="content-top">
-                  {isset(content || warningHtml) && (
                     <section className="post-content mb-3">
                       {warningHtml && (
                         <div
@@ -203,7 +202,6 @@ const Docs = data => {
                         />
                       )}
                     </section>
-                  )}
 
                   {isset(sidebarMenu) && (
                     <section>
