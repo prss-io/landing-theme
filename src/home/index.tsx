@@ -86,11 +86,14 @@ const Home = data => {
             <div className="row">
               <div className="col">
                 <div className="content">
-                  <section
-                    dangerouslySetInnerHTML={{
-                      __html: content
-                    }}
-                  />
+                  <section className="post-content">
+                    <div
+                      className="post-inner-content"
+                      dangerouslySetInnerHTML={{
+                        __html: content
+                      }}
+                    />
+                  </section>
 
                   {false && (
                     <section className="mb-3">
