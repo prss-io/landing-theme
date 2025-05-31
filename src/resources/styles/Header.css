@@ -12,6 +12,7 @@
   width: 100%;
   top: 20px;
   transition: 0.3s background ease-in-out;
+  padding-bottom: 20px;
 }
 
 .page header.page-header .header-nav .logo {

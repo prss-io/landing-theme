@@ -114,15 +114,6 @@ const Docs = data => {
             'menu-show': showMenu
           })}
         >
-          {featuredImageUrl && (
-            <div
-              className="featured-image"
-              style={{
-                backgroundImage: `url(${featuredImageUrl})`
-              }}
-            />
-          )}
-
           <div className="post-title-container">
             <div className="row">
               <div className="col-12 col-lg d-lg-flex flex-column justify-content-center">

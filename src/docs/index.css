@@ -41,7 +41,7 @@
 }
 
 .page.page-docs .hero {
-  height: 140px;
+  height: 100px;
 }
 
 .page.page-docs .post-content {
@@ -126,9 +126,6 @@
 
 .page.page-docs .docs-sidebar ul li.expanded > ul {
   display: block;
-  /* max-height: 500px;
-  overflow-y: auto;
-  overflow-x: hidden; */
 }
 
 .page.page-docs .docs-sidebar ul li.active > a {

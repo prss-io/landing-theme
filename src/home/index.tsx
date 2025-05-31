@@ -49,19 +49,22 @@ const Home = data => {
         }
         heroClass={heroClass}
       >
-        <div className="hero-text animate__animated animate__fadeIn">
-          {heroTitle && <h1 className="hero-title">{heroTitle}</h1>}
-          {heroMessage && (
-            <div className="hero-message mt-4">{heroMessage}</div>
-          )}
-          <div className="cta-btn-container mt-5 mb-5">
-            {ctaUrl && (
-              <a href={ctaUrl} className="btn btn-lg btn-primary cta-btn">
-                {ctaLabel || 'Download'}
-              </a>
-            )}
-          </div>
-        </div>
+        {heroTitle || heroMessage || ctaUrl ? (
+          <div className="hero-text animate__animated animate__fadeIn">
+                {heroTitle && <h1 className="hero-title">{heroTitle}</h1>}
+                {heroMessage && (
+                  <div className="hero-message mt-4">{heroMessage}</div>
+                )}
+                <div className="cta-btn-container mt-5 mb-5">
+                  {ctaUrl && (
+                    <a href={ctaUrl} className="btn btn-lg btn-primary cta-btn">
+                      {ctaLabel || 'Download'}
+                    </a>
+                  )}
+                </div>
+              </div>      
+        ) : null}
+        
         {links && (
           <div className="links mt-4">
             {links.map((link, index) => (

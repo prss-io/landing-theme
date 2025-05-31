@@ -57,11 +57,11 @@
 
 .page.page-post .hero {
   min-height: 415px;
-  background-color: #26252d;
+  background-color: rgba(38,37,45,0.8);
 }
 
 .page.page-post .hero:before {
-  background: #26252dd9;
+  background: rgba(38,37,45,0.8);
 }
 
 .page.page-post .hero .hero-image,

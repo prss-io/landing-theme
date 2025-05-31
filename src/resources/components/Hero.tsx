@@ -22,11 +22,13 @@ const Hero: FunctionComponent<IProps> = ({
           backgroundImage: imageUrl ? `url(${imageUrl})` : null
         }}
       />
-      <div className="container mt-5 mt-sm-0">
-        <div className="row mx-2 justify-content-between title-container-element">
-          <div className="col position-static">{children}</div>
+      {children && (
+        <div className="container mt-5 mt-sm-0">
+          <div className="row mx-2 justify-content-between title-container-element">
+            <div className="col position-static">{children}</div>
+          </div>
         </div>
-      </div>
+      )}
       {afterComponent}
     </div>
   );

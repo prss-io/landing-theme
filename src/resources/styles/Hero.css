@@ -1,5 +1,4 @@
 .hero {
-  height: 500px;
   color: white;
   display: flex;
   align-items: center;
@@ -20,7 +19,7 @@
 
 .hero::before {
   content: '';
-  background: #26252d;
+  background: rgba(38,37,45,0.8);
   z-index: 1;
 }
 
