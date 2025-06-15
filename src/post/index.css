@@ -104,7 +104,7 @@
   height: 330px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .page.page-post .post-date {
@@ -124,6 +124,7 @@
 .page.page-post .card-img-left img {
   width: 100%;
   object-fit: cover;
+  object-position: top;
   height: 100%;
 }
 

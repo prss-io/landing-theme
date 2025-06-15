@@ -22,6 +22,7 @@
 .page.page-blog .blog-items .card-img-left img {
   width: 100%;
   object-fit: cover;
+  object-position: top;
   height: 100%;
 }
 

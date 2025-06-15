@@ -74,6 +74,7 @@
   height: 80px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 
 .page.page-docs .post-date {
