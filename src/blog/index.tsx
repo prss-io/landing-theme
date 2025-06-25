@@ -63,7 +63,7 @@ const Blog = data => {
                     <Aside name="inlineAsideHtml" />
                     {items.map(post => {
                       return (
-                        <div className="card d-flex flex-row">
+                        <div className="card d-flex flex-column flex-md-row">
                           <a
                             className={cx('card-img-left', {
                               'card-has-img': !!post?.vars?.featuredImageUrl

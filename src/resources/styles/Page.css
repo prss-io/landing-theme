@@ -664,11 +664,9 @@
   min-height: 300px;
 }
 
-.page.page-post .hero,
-.page.page-single .hero,
-.page.page-blog .hero {
+.page .hero {
   min-height: 290px;
-  padding-top: 70px !important;
+  padding-top: 60px !important;
   background-color: rgba(38,37,45,0.8);
 }
 

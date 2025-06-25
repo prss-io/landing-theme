@@ -25,7 +25,7 @@ const Hero: FunctionComponent<IProps> = ({
         }}
       />
       {children && (
-        <div className={`container mt-5 mt-sm-0 ${heroContainerClass}`}>
+        <div className={`container my-5 ${heroContainerClass}`}>
           <div className="row mx-2 justify-content-between title-container-element">
             <div className="col position-static">{children}</div>
           </div>

@@ -35,7 +35,7 @@ const Post = data => {
     <Page className="page-post">
       <Header />
       {(postTitle || heroTitle) && (
-        <Hero imageUrl={featuredImageUrl || heroImageUrl} heroClass={heroClass} heroContainerClass="mb-4">
+        <Hero imageUrl={featuredImageUrl || heroImageUrl} heroClass={heroClass}>
           <div>
             {(postTitle || heroTitle) && (
               <h1 className="hero-title">{postTitle || heroTitle}</h1>
