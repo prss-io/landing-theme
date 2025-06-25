@@ -1,6 +1,3 @@
-import '../resources/styles/common.css';
-import './index.css';
-
 import React, { Fragment } from 'react';
 import * as PRSS from 'prss';
 import Header from '../resources/components/Header';

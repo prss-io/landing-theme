@@ -1,10 +1,5 @@
-import '../resources/styles/common.css';
-import './index.css';
-
 import React from 'react';
 import * as PRSS from 'prss';
-
-import cx from 'classnames';
 
 import Header from '../resources/components/Header';
 import Footer from '../resources/components/Footer';
@@ -28,25 +23,22 @@ const Post = data => {
     heroClass
   } = PRSS.getProp('vars') as any;
 
-  const { content, uuid: postId, title: postTitle, createdAt } = PRSS.getProp(
+  const { content, /*uuid: postId,*/ title: postTitle, createdAt } = PRSS.getProp(
     'item'
   );
   const sidebarHtml = PRSS.getProp('sidebarHtml');
 
-  const items = PRSS.getItems('post').filter(item => item.uuid !== postId);
-  const shuffledItem = PRSS.shuffle(items)[0];
+  //const items = PRSS.getItems('post').filter(item => item.uuid !== postId);
+  //const shuffledItem = PRSS.shuffle(items)[0];
 
   return (
     <Page className="page-post">
       <Header />
       {(postTitle || heroTitle) && (
-        <Hero imageUrl={featuredImageUrl || heroImageUrl} heroClass={heroClass}>
+        <Hero imageUrl={featuredImageUrl || heroImageUrl} heroClass={heroClass} heroContainerClass="mb-4">
           <div>
             {(postTitle || heroTitle) && (
-              <h1 className="hero-title">{heroTitle || postTitle}</h1>
-            )}
-            {heroMessage && (
-              <div className="hero-message mt-4">{heroMessage}</div>
+              <h1 className="hero-title">{postTitle || heroTitle}</h1>
             )}
             {createdAt && (
               <div
@@ -87,7 +79,7 @@ const Post = data => {
                   />
                 </section>
 
-                {shuffledItem && (
+                {/*shuffledItem && (
                   <section className="mb-3">
                     <h4 className="section-title">
                       <span>Explore More</span>
@@ -95,7 +87,7 @@ const Post = data => {
 
                     <div className="mt-4 mb-4">
                       <div className="card mb-3 d-flex flex-row">
-                        {/*shuffledItem.vars?.featuredImageUrl && (
+                        {shuffledItem.vars?.featuredImageUrl && (
                           <div className="col-2 p-0">
                             <a
                               className={cx('card-img-left', {
@@ -113,7 +105,7 @@ const Post = data => {
                               )}
                             </a>
                           </div>
-                        )*/}
+                        )}
 
                         <div className="card-body col">
                           {shuffledItem.title && (
@@ -129,7 +121,7 @@ const Post = data => {
                       </div>
                     </div>
                   </section>
-                )}
+                )*/}
               </div>
             </div>
             {isset(sidebarHtml || sidebarAsideHtml) && (

@@ -1,6 +1,3 @@
-import '../resources/styles/common.css';
-import './index.css';
-
 import React from 'react';
 import * as PRSS from 'prss';
 import Header from '../resources/components/Header';
@@ -19,14 +16,11 @@ const Card = data => {
   const sidebarHtml = PRSS.getProp('sidebarHtml');
 
   return (
-    <Page className="page-post">
+    <Page className="page-single">
       <Header />
       {postTitle && (
         <Hero imageUrl={heroImageUrl} heroClass={heroClass}>
-          <h1 className="hero-title">{heroTitle || postTitle}</h1>
-          {heroMessage && (
-            <div className="hero-message mt-2">{heroMessage}</div>
-          )}
+          <h1 className="hero-title">{postTitle || heroTitle}</h1>
         </Hero>
       )}
       <main>

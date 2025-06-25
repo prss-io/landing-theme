@@ -1,9 +1,10 @@
 {
   "name": "@prss/landing-theme",
   "title": "Landing",
-  "version": "3.0.35",
+  "version": "3.1.9",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/landing-theme",
+  "description": "Landing Theme for PRSS",
   "license": "MIT",
   "type": "showcase",
   "parser": "react",
@@ -19,18 +20,6 @@
     "featuredImageAlt": {
       "type": "image",
       "description": "Path for the post's alt featured image"
-    },
-    "faviconImageUrl": {
-      "type": "image",
-      "description": "Path for the site favicon (browser tab icon)"
-    },
-    "truncateTitleLength": {
-      "type": "string",
-      "description": "Max length for the post's title in article cards"
-    },
-    "truncateContentLength": {
-      "type": "string",
-      "description": "Max length for the post's content in article cards"
     },
     "heroClass": {
       "type": "string",
@@ -48,17 +37,17 @@
       "type": "image",
       "description": "Url for the featured image"
     },
-    "heroShowcaseImageUrl": {
+    "faviconImageUrl": {
       "type": "image",
-      "description": "Url for the showcase image"
+      "description": "Path for the site favicon (browser tab icon)"
     },
-    "ctaUrl": {
-      "type": "url",
-      "description": "Url for the Call to action"
-    },
-    "ctaLabel": {
+    "truncateTitleLength": {
       "type": "string",
-      "description": "Label for the Call to action"
+      "description": "Max length for the post's title in article cards"
+    },
+    "truncateContentLength": {
+      "type": "string",
+      "description": "Max length for the post's content in article cards"
     },
     "sidebarMenu": {
       "type": "string",
@@ -125,5 +114,7 @@
     "page",
     "post"
   ],
-  "isSSR": true
+  "isSSR": true,
+  "combinedCSS": true,
+  "clientScript": true
 }

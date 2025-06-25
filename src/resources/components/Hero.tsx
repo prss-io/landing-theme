@@ -6,13 +6,15 @@ interface IProps {
   imageUrl: ReactNode;
   afterComponent?: ReactNode;
   heroClass?: string;
+  heroContainerClass?: string;
 }
 
 const Hero: FunctionComponent<IProps> = ({
   children,
   imageUrl = '',
   afterComponent,
-  heroClass
+  heroClass = '',
+  heroContainerClass = ''
 }) => {
   return (
     <div className={`hero${heroClass ? ` ${heroClass}` : ''}`}>
@@ -23,7 +25,7 @@ const Hero: FunctionComponent<IProps> = ({
         }}
       />
       {children && (
-        <div className="container mt-5 mt-sm-0">
+        <div className={`container mt-5 mt-sm-0 ${heroContainerClass}`}>
           <div className="row mx-2 justify-content-between title-container-element">
             <div className="col position-static">{children}</div>
           </div>
