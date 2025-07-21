@@ -101,13 +101,15 @@
   padding: 0;
 }
 
-.page main .main-container section {
+.page main .main-container section,
+.page main .main-container .content-section {
   padding: 20px;
   margin: 20px;
   border-bottom: 1px dashed #e6e6e6;
 }
 
-.page main .main-container section:last-child {
+.page main .main-container section:last-child,
+.page main .main-container .content-section:last-child {
   border-bottom: none;
 }
 
@@ -340,12 +342,14 @@
   margin: 15px 0;
 }
 
-.page.page-docs main .main-container section {
+.page.page-docs main .main-container section,
+.page.page-docs main .main-container .content-section {
   padding: 0;
   border-bottom: none;
 }
 
-.page.page-docs main .main-container section h2 {
+.page.page-docs main .main-container section h2,
+.page.page-docs main .main-container .content-section h2 {
   font-size: 28px;
   padding: 15px 0;
   margin-bottom: 30px;
@@ -354,7 +358,8 @@
   border-bottom: 1px solid #dedfe0;
 }
 
-.page.page-docs main .main-container section a:not(.btn) {
+.page.page-docs main .main-container section a:not(.btn),
+.page.page-docs main .main-container .content-section a:not(.btn) {
   color: #969696;
 }
 

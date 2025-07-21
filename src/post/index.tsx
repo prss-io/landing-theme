@@ -1,5 +1,5 @@
 import React from 'react';
-import * as PRSS from 'prss';
+import * as PRSS from "@prss/ui";
 
 import Header from '../resources/components/Header';
 import Footer from '../resources/components/Footer';
@@ -7,6 +7,8 @@ import Page from '../resources/components/Page';
 import Hero from '../resources/components/Hero';
 import { isset } from '../resources/services/utils';
 import Aside from '../resources/components/Aside';
+
+import ContentRenderer from "@prss/ui/build/ContentRenderer";
 
 const Post = data => {
   PRSS.init(data);
@@ -72,10 +74,9 @@ const Post = data => {
             <div className="col">
               <div className="content">
                 <section className="post-content mt-4 mb-3 pb-5">
-                  <div className="post-inner-content"
-                    dangerouslySetInnerHTML={{
-                      __html: content
-                    }}
+                  <ContentRenderer 
+                    content={content}
+                    className="post-inner-content"
                   />
                 </section>
 
