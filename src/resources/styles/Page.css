@@ -703,17 +703,6 @@
   margin: 30px 0;
 }
 
-.page.page-post .post-content ul li {
-  counter-increment: item;
-  margin-bottom: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.15);
-  padding: 15px 20px;
-  border-radius: 10px;
-  position: relative;
-  font-size: 18px;
-  line-height: 1.58;
-}
-
 .page.page-post .featured-image {
   height: 330px;
   background-size: cover;
