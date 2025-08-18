@@ -14,6 +14,7 @@ interface IVars {
     heroImageUrl?: string;
     heroShowcaseImageUrl?: string;
     heroClass?: string;
+    docsImageUrl?: string;
 
     /**
      * Download

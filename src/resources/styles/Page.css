@@ -439,6 +439,12 @@
   padding-right: 15px;
 }
 
+@media (min-width: 1200px) {
+  .page.page-docs .docs-sidebar ul li {
+    max-width: 250px !important;
+  }
+}
+
 /* .page.page-docs .docs-sidebar ul li a:hover {
   background: #efefef;
 } */
@@ -662,11 +668,6 @@
 
 .page.page-post strong {
   font-weight: 700;
-}
-
-.page.page-post iframe {
-  width: 100%;
-  min-height: 300px;
 }
 
 .page .hero {

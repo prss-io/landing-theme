@@ -1,6 +1,6 @@
 import '../styles/Aside.css';
 
-import React, { FunctionComponent, useEffect, useRef } from 'react';
+import React, { FunctionComponent } from 'react';
 import * as PRSS from "@prss/ui";
 import cx from 'classnames';
 
@@ -11,17 +11,10 @@ interface IProps {
 const Aside: FunctionComponent<IProps> = ({ name }) => {
   const vars = PRSS.getProp('vars');
   const asideName = vars[name];
-  const divRef = useRef(null);
 
   if (!asideName) return null;
 
-  useEffect(() => {
-    const html = document.createRange().createContextualFragment(asideName);
-    divRef.current.innerHtml = '';
-    divRef.current.appendChild(html);
-  }, []);
-
-  return <div ref={divRef} className={cx('page-aside', name)} />;
+  return <div className={cx('page-aside', name)} dangerouslySetInnerHTML={{ __html: asideName }} />;
 };
 
 export default Aside;

@@ -1,7 +1,7 @@
 {
   "name": "@prss/landing-theme",
   "title": "Landing",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/landing-theme",
   "description": "Landing Theme for PRSS",
@@ -36,6 +36,10 @@
     "heroImageUrl": {
       "type": "image",
       "description": "Url for the featured image"
+    },
+    "docsImageUrl": {
+      "type": "image",
+      "description": "Image URL to show in documentation pages instead of title"
     },
     "faviconImageUrl": {
       "type": "image",
