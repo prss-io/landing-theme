@@ -52,7 +52,10 @@ const Home = data => {
           <div className="hero-text animate__animated animate__fadeIn">
                 {heroTitle && <h1 className="hero-title">{heroTitle}</h1>}
                 {heroMessage && (
-                  <div className="hero-message mt-4">{heroMessage}</div>
+                  <ContentRenderer 
+                    content={heroMessage}
+                    className="hero-message mt-4"
+                  />
                 )}
                 <div className="cta-btn-container mt-5 mb-5">
                   {ctaUrl && (
