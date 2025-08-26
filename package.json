@@ -1,6 +1,6 @@
 {
   "name": "@prss/landing-theme",
-  "version": "3.5.2",
+  "version": "3.5.3",
   "description": "Landing Theme for PRSS",
   "main": "build/index.js",
   "scripts": {
